@@ -1,0 +1,12 @@
+<h1>Q: What is the date?</h1>
+<h1>A: <%= @date.strftime('%A, %B %d, %Y') %></h1>
+
+<p>The year is: <%= @date.strftime('%Y') %> (or '<%= @date.strftime('%y') %> if you're lazy)...</p>
+<p>The month is: <%= @date.strftime('%B') %> (and we all know <%= @date.strftime('%b') %> is month <%= @date.strftime('%m') %> of the year)...</p>
+<p>Today is day <%= @date.strftime('%d') %> of the month but day <%= @date.strftime('%w') %> of the week...</p>
+<p>Which, of course, is <%= @date.strftime('%A') %> (or <%= @date.strftime('%a') %> if you really can't be bothered)...</p>
+
+<p class="note"><%= link_to "Refresh", date_index_path %><br>
+(Though, hey, you know it's still gonna be today, right?)</p>
+
+<p class="note"><%= link_to "home", root_path %></p>

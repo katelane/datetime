@@ -1,0 +1,17 @@
+<h1>Q: What time is it?</h1>
+<h1>A: <%= @time.strftime('%I:%M:%S %p %Z') %></h1>
+
+<p>The hour is: <%= @time.strftime('%I') %> (or <%= @time.strftime('%H') %> if you use the 24 hour clock)...</p>
+
+<p>The minute is: <%= @time.strftime('%M') %>...</p>
+
+<p>We're <%= @time.strftime('%S') %> seconds into that minute...</p>
+
+<p>It's currently <%= @time.strftime('%p') %>...
+
+<p>And this is coming to you from <%= @time.strftime('%Z') %> (time zone)...</p>
+
+<p>Tomorrow begins in <%= @time.end_of_day - @time %> seconds...</p>
+
+<p class="note"><%= link_to "Refresh", time_index_path %>
+<p class="note"><%= link_to "home", root_path %></p>
